@@ -5,6 +5,9 @@
     text-align: center;
     padding: 15rem 0 10rem;
 }
+.hero__svg {
+    display: none;
+}
 .hero .title {
     line-height: 1;
     margin-bottom: 2rem;
@@ -36,12 +39,15 @@
 .contacts__item .text {
     font-family: var(--title-font);
 }
-
+.contacts__item-svg {
+    display: none;
+}
 
 
 
 .policy__wrapper {
     background-color: var(--first-brand-color);
+    position: relative;
 }
 .policy {
     padding: 15rem 0;
@@ -75,8 +81,21 @@
     border-bottom: .2rem solid var(--second-brand-color);
     transition: all .3s ease-in-out;
 }
-
-
+.policy__wrapper-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    fill: var(--second-brand-color);
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+.policy__wrapper .container {
+    z-index: 2;
+    position: relative;
+}
 @media screen and (min-width: 1440px)  {
 
     .hero {
@@ -86,7 +105,7 @@
     .hero__block {
         position: relative;
     }
-    .hero::before {
+    /* .hero::before {
         position: absolute;
         display: block;
         content: '';
@@ -99,11 +118,19 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    } */
+    .hero__svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        fill: var(--second-brand-color);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
-    .hero .title span,
-    .hero .text {
-        color: var(--sub-text-color);
-    }
+    
 
 
     .contacts__item:not(:last-child) {
@@ -120,32 +147,27 @@
     .contacts__item .text {
         position: relative;
     }
-    .contacts__item::before {
+    .contacts__item {
+        position: relative;
+    }
+    .contacts__item-svg {
         display: block;
-        content: '';
         position: absolute;
-        width: 15rem;
-        height: 7.5rem;
-        background-image: url('../img/bg3.png');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        top: 35%;
-        left: -7.5rem;
-        transform: translate(0, -50%);
+        fill: var(--second-brand-color);
+        width: 8rem;
+        height: 8rem;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 0;
     }
+  
 
 
-    .policy__wrapper {
-        background-image: url('../img/bg.png');
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
+  
     .policy__btn:hover {
         letter-spacing: .2rem;
     }
     .policy__block {
-        background-color: rgba(245, 245, 245, .85);
+        background-color: rgba(255, 255, 255, .8);
     }
 }
