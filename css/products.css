@@ -136,12 +136,7 @@
    fill: var(--sub-text-color);
 }
 @media screen and (min-width: 1440px) { 
-    .hero-products { 
-        background-image: url('../img/bg4.png');
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
+ 
     .hero-products .sub-title {
         background-color: var(--third-brand-color);
         padding: 1rem;
